@@ -219,16 +219,22 @@
     background-color: #ddd;
     display: grid;
     grid-template-rows: repeat(2, 150px);
-    grid-template-columns: repeat(2, 1fr);
+    // grid-template-columns: repeat(2, 1fr);
     grid-gap: 30px;
     grid-auto-rows: 80px;
     grid-auto-columns: .5fr;
     // default is row
     // grid-auto-flow: column;
+    grid-auto-flow: row dense;
     // veritcally center each item in its grid 
-    align-items: center; // by default this is stretch 
+    // align-items: center; // by default this is stretch 
     //
-    justify-items: center; // center horizonally  - default is stretch 
+    // justify-items: center; // center horizonally  - default is stretch 
+    // Align grid tracks to grid container
+    grid-template-columns: repeat(2, 200px);
+    justify-content: center;
+    align-content: center;
+    height: 1000px;
     .item2 {
         padding: 20px;
         color: white;
@@ -238,8 +244,12 @@
         &--4 {
             background-color: crimson;
             grid-row: 2/span 3;
-            align-self: start;
-            justify-self: end;
+            // align-self: start;
+            // justify-self: end;
+        }
+        &--6 {
+            background-color: lightskyblue;
+            grid-row: 2/span 2;
         }
         &--7 {
             background-color: pink;
