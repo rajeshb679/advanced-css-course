@@ -213,47 +213,96 @@
     }
 }
 
-.div2 {
+// .div2 {
+//     width: 1000px;
+//     margin: 30px auto;
+//     background-color: #ddd;
+//     display: grid;
+//     grid-template-rows: repeat(2, 150px);
+//     // grid-template-columns: repeat(2, 1fr);
+//     grid-gap: 30px;
+//     grid-auto-rows: 80px;
+//     grid-auto-columns: .5fr;
+//     // default is row
+//     // grid-auto-flow: column;
+//     grid-auto-flow: row dense;
+//     // veritcally center each item in its grid 
+//     // align-items: center; // by default this is stretch 
+//     //
+//     // justify-items: center; // center horizonally  - default is stretch 
+//     // Align grid tracks to grid container
+//     grid-template-columns: repeat(2, 200px);
+//     justify-content: center;
+//     align-content: center;
+//     height: 1000px;
+//     .item2 {
+//         padding: 20px;
+//         color: white;
+//         font-family: sans-serif;
+//         font-size: 30px;
+//         background-color: orangered;
+//         &--4 {
+//             background-color: crimson;
+//             grid-row: 2/span 3;
+//             // align-self: start;
+//             // justify-self: end;
+//         }
+//         &--6 {
+//             background-color: lightskyblue;
+//             grid-row: 2/span 2;
+//         }
+//         &--7 {
+//             background-color: pink;
+//             grid-column: 1/-1;
+//         }
+//     }
+// }
+// 
+.div3 {
     width: 1000px;
     margin: 30px auto;
     background-color: #ddd;
     display: grid;
-    grid-template-rows: repeat(2, 150px);
-    // grid-template-columns: repeat(2, 1fr);
-    grid-gap: 30px;
-    grid-auto-rows: 80px;
-    grid-auto-columns: .5fr;
-    // default is row
-    // grid-auto-flow: column;
-    grid-auto-flow: row dense;
-    // veritcally center each item in its grid 
-    // align-items: center; // by default this is stretch 
-    //
-    // justify-items: center; // center horizonally  - default is stretch 
-    // Align grid tracks to grid container
-    grid-template-columns: repeat(2, 200px);
-    justify-content: center;
-    align-content: center;
-    height: 1000px;
-    .item2 {
+    // min max row
+    // grid-template-rows: repeat(2, 150px);
+    // grid-template-rows: repeat(2, min-content);
+    /*
+    grid-template-rows: repeat(2, minmax(150px, min-content));
+    grid-template-columns: max-content 1fr 1fr min-content;
+    */
+    width: 90%;
+    grid-template-rows: repeat(2, minmax(150px, min-content));
+    // grid-template-columns: minmax(200px, 300px) repeat(3, 1fr);
+    grid-template-columns: minmax(200px, 50%) repeat(3, 1fr);
+    .item3 {
         padding: 20px;
         color: white;
         font-family: sans-serif;
         font-size: 30px;
         background-color: orangered;
+        &--1 {
+            background-color: blue;
+        }
+        &--2 {
+            background-color: rosybrown;
+        }
+        &--3 {
+            background-color: seashell;
+        }
         &--4 {
-            background-color: crimson;
-            grid-row: 2/span 3;
-            // align-self: start;
-            // justify-self: end;
+            background-color: greenyellow;
+        }
+        &--5 {
+            background-color: khaki;
         }
         &--6 {
-            background-color: lightskyblue;
-            grid-row: 2/span 2;
+            background-color: crimson;
         }
         &--7 {
+            background-color: lightskyblue;
+        }
+        &--8 {
             background-color: pink;
-            grid-column: 1/-1;
         }
     }
 }
