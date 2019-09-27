@@ -121,6 +121,8 @@
 */
 
 // Method 2 Line names
+
+/*
 .template {
     background-color: #eee;
     width: 1000px;
@@ -163,5 +165,50 @@
     &--footer {
         grid-column: 1/5;
         background-color: blue;
+    }
+}
+
+*/
+
+// Naming Grid Areas
+.template {
+    background-color: #eee;
+    width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-rows: 100px 200px 300px 100px;
+    grid-template-columns: repeat(3, 240px) 1fr;
+    grid-gap: 30px;
+    // grid-template-areas: "head head head head" "box box box side" "main main main side" "foot foot foot foot";
+    grid-template-areas: ". . head head" "box box box side" "main main main side" "foot foot foot foot";
+}
+
+.temp {
+    padding: 20px;
+    font-size: 30px;
+    &--header {
+        background-color: orangered;
+        grid-area: head;
+    }
+    &--box1 {
+        background-color: coral;
+    }
+    &--box2 {
+        background-color: coral;
+    }
+    &--box3 {
+        background-color: coral;
+    }
+    &--sidebar {
+        background-color: greenyellow;
+        grid-area: side;
+    }
+    &--main {
+        background-color: violet;
+        grid-area: main;
+    }
+    &--footer {
+        background-color: blue;
+        grid-area: foot;
     }
 }
