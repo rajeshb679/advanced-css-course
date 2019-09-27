@@ -181,12 +181,18 @@
   background-color: #ddd;
   display: grid;
   /*
+    // min max row
+    // grid-template-rows: repeat(2, 150px);
+    // grid-template-rows: repeat(2, min-content);
+    /*
     grid-template-rows: repeat(2, minmax(150px, min-content));
     grid-template-columns: max-content 1fr 1fr min-content;
     */
   width: 90%;
   grid-template-rows: repeat(2, minmax(150px, min-content));
-  grid-template-columns: minmax(200px, 50%) repeat(3, 1fr); }
+  grid-template-columns: repeat(auto-fill, 100px);
+  grid-template-columns: repeat(auto-fit, 100px);
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); }
   .div3 .item3 {
     padding: 20px;
     color: white;
